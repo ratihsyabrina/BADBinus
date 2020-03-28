@@ -1,0 +1,47 @@
+/******************************************************************************
+
+      					2201837781 - Ratih Syabrina
+
+*******************************************************************************/
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main
+{
+    
+    public static int hitung(int i){
+        int j = i, hasil = 0;
+
+        //memasukkan hasil dari pangkat menjadi integer
+        ArrayList<Integer> array = new ArrayList<>();
+        do {
+            array.add(j % 10);
+            j /= 10;
+        } while (j > 0);
+
+        //melakukan kalkulasi tiap digit dari hasil pangkat
+        for (i = 0; i < array.size(); i++) {
+            hasil += array.get(i);
+        }
+        return hasil;
+     
+    }
+    
+	public static void main(String[] args) {
+		System.out.println("Forum BAD Binus - 2201837781 Ratih Syabrina");
+		
+		
+		int result = 2;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Masukkan nilai X: ");
+		int x = sc.nextInt();
+		
+		
+		int po = (int) Math.pow(result,x);
+	    System.out.print("2^"+x+" = "+po+" jawabannya:"+hitung(po));
+		
+	
+		
+	}
+}
